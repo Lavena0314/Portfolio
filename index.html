@@ -151,38 +151,29 @@
       margin: 12px auto 0;
     }
 
-    /* ===================== */
-    /* iOS SQUIRCLE ICONS    */
-    /* ===================== */
-    .ios-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      color: #fff;
-      margin-bottom: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-      transition: transform 0.3s, box-shadow 0.3s;
-      flex-shrink: 0;
+    /* ======================== */
+    /* GLOWING CARD — GOLD GLOW */
+    /* ======================== */
+    .glow-card {
+      background: var(--card-bg);
+      border: 1px solid #C9A84C55;
+      border-radius: 20px;
+      padding: 30px;
+      flex: 1;
+      min-width: 260px;
+      max-width: 320px;
+      position: relative;
+      transition: border-color 0.4s, box-shadow 0.4s, transform 0.3s;
+      box-shadow: 0 0 10px #C9A84C22, 0 0 20px #C9A84C11;
     }
-    .ios-icon:hover {
-      transform: scale(1.08);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+    .glow-card:hover {
+      border-color: var(--gold);
+      box-shadow:
+        0 0 12px #C9A84C99,
+        0 0 30px #C9A84C55,
+        0 0 60px #C9A84C22;
+      transform: translateY(-6px);
     }
-    /* Gradient presets */
-    .ios-blue    { background: linear-gradient(145deg, #2196F3, #0d47a1); }
-    .ios-purple  { background: linear-gradient(145deg, #9C27B0, #4a148c); }
-    .ios-green   { background: linear-gradient(145deg, #4CAF50, #1b5e20); }
-    .ios-orange  { background: linear-gradient(145deg, #FF9800, #e65100); }
-    .ios-red     { background: linear-gradient(145deg, #f44336, #b71c1c); }
-    .ios-teal    { background: linear-gradient(145deg, #009688, #004d40); }
-    .ios-indigo  { background: linear-gradient(145deg, #3F51B5, #1a237e); }
-    .ios-pink    { background: linear-gradient(145deg, #E91E63, #880e4f); }
-    .ios-gold    { background: linear-gradient(145deg, #C9A84C, #7a5c00); }
-    .ios-cyan    { background: linear-gradient(145deg, #00BCD4, #006064); }
 
     /* NUMBERED CARDS */
     .cards-grid {
@@ -190,23 +181,6 @@
       gap: 24px;
       flex-wrap: wrap;
       justify-content: center;
-    }
-    .num-card {
-      background: var(--card-bg);
-      border: 1px solid #2a2a2a;
-      border-radius: 20px;
-      padding: 30px;
-      flex: 1;
-      min-width: 260px;
-      max-width: 320px;
-      transition: border-color 0.3s, transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .num-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-6px);
     }
     .num-badge {
       display: inline-block;
@@ -218,100 +192,61 @@
       border-radius: 8px;
       margin-bottom: 16px;
     }
-    .num-card h3 {
+    .glow-card h3 {
       color: var(--text);
       font-size: 1rem;
       margin-bottom: 8px;
     }
-    .num-card p {
+    .glow-card p {
       color: var(--muted);
       font-size: 0.85rem;
       line-height: 1.7;
     }
-    .num-card .gold-line {
-      width: 30px;
-      height: 2px;
-      background: var(--gold);
-      margin-top: 14px;
-    }
-
-    /* SKILLS — iOS ICON GRID */
-    .skills-ios-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 28px;
-      justify-content: center;
-    }
-    .skill-ios-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      width: 100px;
-      cursor: default;
-    }
-    .skill-ios-item span {
-      font-size: 0.78rem;
-      color: var(--muted);
-      text-align: center;
-      line-height: 1.4;
-    }
-
-    /* WORK CARDS with iOS icons */
-    .work-card {
-      background: var(--card-bg);
-      border: 1px solid #2a2a2a;
-      border-radius: 20px;
-      padding: 28px;
-      flex: 1;
-      min-width: 260px;
-      max-width: 320px;
-      transition: border-color 0.3s, transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .work-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-6px);
-    }
-    .work-card h3 {
-      color: var(--text);
-      font-size: 1rem;
-      margin-bottom: 6px;
-    }
-    .work-card .company {
+    .glow-card .company {
       color: var(--gold);
       font-size: 0.82rem;
       font-weight: 600;
       margin-bottom: 10px;
     }
-    .work-card p {
-      color: var(--muted);
-      font-size: 0.84rem;
-      line-height: 1.7;
-    }
-    .work-card .gold-line {
+    .gold-line {
       width: 30px;
       height: 2px;
       background: var(--gold);
       margin-top: 14px;
     }
-    .num-badge-work {
-      display: inline-block;
-      background: #2a2200;
-      color: var(--gold);
-      font-size: 0.85rem;
-      font-weight: 700;
-      padding: 6px 12px;
-      border-radius: 8px;
-      margin-bottom: 16px;
+
+    /* SKILLS TAGS */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
     }
+    .skill-tag {
+      background: var(--card-bg);
+      border: 1px solid #C9A84C55;
+      color: var(--gold);
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.4s, box-shadow 0.4s;
+      box-shadow: 0 0 8px #C9A84C22;
+    }
+    .skill-tag:hover {
+      border-color: var(--gold);
+      box-shadow:
+        0 0 10px #C9A84C99,
+        0 0 24px #C9A84C44;
+    }
+    .skill-tag i { font-size: 0.9rem; }
 
     /* QUOTE BOX */
     .quote-box {
       background: var(--card-bg);
-      border: 1px solid #2a2a2a;
+      border: 1px solid #C9A84C55;
       border-radius: 20px;
       padding: 40px;
       max-width: 900px;
@@ -319,8 +254,24 @@
       display: flex;
       gap: 24px;
       align-items: flex-start;
+      box-shadow: 0 0 10px #C9A84C22, 0 0 30px #C9A84C11;
+      transition: box-shadow 0.4s, border-color 0.4s;
     }
-    .quote-icon-wrap .ios-icon { margin-bottom: 0; }
+    .quote-box:hover {
+      border-color: var(--gold);
+      box-shadow:
+        0 0 14px #C9A84C99,
+        0 0 40px #C9A84C44;
+    }
+    .quote-icon {
+      background: #2a2200;
+      color: var(--gold);
+      font-size: 1.5rem;
+      padding: 14px;
+      border-radius: 10px;
+      min-width: 52px;
+      text-align: center;
+    }
     .quote-box p {
       font-size: 1.1rem;
       line-height: 1.8;
@@ -343,7 +294,7 @@
     .quote-author-info strong { display: block; font-size: 0.9rem; }
     .quote-author-info span { color: var(--muted); font-size: 0.8rem; }
 
-    /* CONTACT — iOS style */
+    /* CONTACT */
     .contact-grid {
       display: flex;
       gap: 24px;
@@ -352,19 +303,28 @@
     }
     .contact-card {
       background: var(--card-bg);
-      border: 1px solid #2a2a2a;
+      border: 1px solid #C9A84C55;
       border-radius: 20px;
       padding: 30px 40px;
       text-align: center;
       flex: 1;
       min-width: 220px;
       max-width: 280px;
-      transition: border-color 0.3s, transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      box-shadow: 0 0 10px #C9A84C22, 0 0 20px #C9A84C11;
+      transition: border-color 0.4s, box-shadow 0.4s, transform 0.3s;
     }
-    .contact-card:hover { border-color: var(--gold); transform: translateY(-6px); }
+    .contact-card:hover {
+      border-color: var(--gold);
+      box-shadow:
+        0 0 14px #C9A84C99,
+        0 0 40px #C9A84C44;
+      transform: translateY(-6px);
+    }
+    .contact-card .icon {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
     .contact-card h4 { font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
     .contact-card a {
       color: var(--text);
@@ -395,7 +355,6 @@
       section { padding: 80px 20px; }
       #hero h1 { font-size: 2.2rem; }
       .quote-box { flex-direction: column; }
-      .skill-ios-item { width: 80px; }
     }
   </style>
 </head>
@@ -434,24 +393,21 @@
     <div class="line"></div>
   </div>
   <div class="cards-grid">
-    <div class="num-card">
-      <div class="ios-icon ios-blue"><i class="fas fa-graduation-cap"></i></div>
+    <div class="glow-card">
       <div class="num-badge">01</div>
-      <h3>BS Information Technology</h3>
+      <h3><i class="fas fa-graduation-cap" style="color:var(--gold);margin-right:8px;"></i>BS Information Technology</h3>
       <p>Graduated with a degree in Information Technology, building a strong foundation in computing, systems, and digital solutions.</p>
       <div class="gold-line"></div>
     </div>
-    <div class="num-card">
-      <div class="ios-icon ios-purple"><i class="fas fa-university"></i></div>
+    <div class="glow-card">
       <div class="num-badge">02</div>
-      <h3>Computer Education Department</h3>
+      <h3><i class="fas fa-university" style="color:var(--gold);margin-right:8px;"></i>Computer Education Department</h3>
       <p>Affiliated with Capiz State University under the Computer Education Department, contributing to academic excellence.</p>
       <div class="gold-line"></div>
     </div>
-    <div class="num-card">
-      <div class="ios-icon ios-teal"><i class="fas fa-book-open"></i></div>
+    <div class="glow-card">
       <div class="num-badge">03</div>
-      <h3>Continuous Learning</h3>
+      <h3><i class="fas fa-book-open" style="color:var(--gold);margin-right:8px;"></i>Continuous Learning</h3>
       <p>Committed to professional development through teaching, training, and staying current with digital technologies.</p>
       <div class="gold-line"></div>
     </div>
@@ -464,39 +420,15 @@
     <h2>My <span>Skills</span></h2>
     <div class="line"></div>
   </div>
-  <div class="skills-ios-grid">
-    <div class="skill-ios-item">
-      <div class="ios-icon ios-blue"><i class="fas fa-headset"></i></div>
-      <span>Customer Success</span>
-    </div>
-    <div class="skill-ios-item">
-      <div class="ios-icon ios-purple"><i class="fas fa-chalkboard-teacher"></i></div>
-      <span>Teaching & Instruction</span>
-    </div>
-    <div class="skill-ios-item">
-      <div class="ios-icon ios-indigo"><i class="fas fa-laptop-code"></i></div>
-      <span>Information Technology</span>
-    </div>
-    <div class="skill-ios-item">
-      <div class="ios-icon ios-orange"><i class="fas fa-store"></i></div>
-      <span>Digital Business</span>
-    </div>
-    <div class="skill-ios-item">
-      <div class="ios-icon ios-green"><i class="fas fa-file-excel"></i></div>
-      <span>Microsoft Office</span>
-    </div>
-    <div class="skill-ios-item">
-      <div class="ios-icon ios-red"><i class="fas fa-graduation-cap"></i></div>
-      <span>LMS Platforms</span>
-    </div>
-    <div class="skill-ios-item">
-      <div class="ios-icon ios-pink"><i class="fas fa-users"></i></div>
-      <span>People Management</span>
-    </div>
-    <div class="skill-ios-item">
-      <div class="ios-icon ios-cyan"><i class="fas fa-globe"></i></div>
-      <span>Digital Marketing</span>
-    </div>
+  <div class="skills-grid">
+    <div class="skill-tag"><i class="fas fa-headset"></i> Customer Success</div>
+    <div class="skill-tag"><i class="fas fa-chalkboard-teacher"></i> Teaching & Instruction</div>
+    <div class="skill-tag"><i class="fas fa-laptop-code"></i> Information Technology</div>
+    <div class="skill-tag"><i class="fas fa-store"></i> Digital Business</div>
+    <div class="skill-tag"><i class="fas fa-file-excel"></i> Microsoft Office</div>
+    <div class="skill-tag"><i class="fas fa-graduation-cap"></i> LMS Platforms</div>
+    <div class="skill-tag"><i class="fas fa-users"></i> People Management</div>
+    <div class="skill-tag"><i class="fas fa-globe"></i> Digital Marketing</div>
   </div>
 </section>
 
@@ -507,34 +439,30 @@
     <div class="line"></div>
   </div>
   <div class="cards-grid">
-    <div class="work-card">
-      <div class="ios-icon ios-blue"><i class="fas fa-briefcase"></i></div>
-      <div class="num-badge-work">01</div>
-      <h3>Customer Success Manager</h3>
+    <div class="glow-card">
+      <div class="num-badge">01</div>
+      <h3><i class="fas fa-briefcase" style="color:var(--gold);margin-right:8px;"></i>Customer Success Manager</h3>
       <div class="company">Servio Technology</div>
       <p>Leading customer success strategies and ensuring client satisfaction in a tech-driven environment.</p>
       <div class="gold-line"></div>
     </div>
-    <div class="work-card">
-      <div class="ios-icon ios-orange"><i class="fas fa-certificate"></i></div>
-      <div class="num-badge-work">02</div>
-      <h3>TESDA Instructor</h3>
+    <div class="glow-card">
+      <div class="num-badge">02</div>
+      <h3><i class="fas fa-certificate" style="color:var(--gold);margin-right:8px;"></i>TESDA Instructor</h3>
       <div class="company">Digital Business Training Center</div>
       <p>Teaching digital business skills and empowering students with industry-ready knowledge.</p>
       <div class="gold-line"></div>
     </div>
-    <div class="work-card">
-      <div class="ios-icon ios-purple"><i class="fas fa-chalkboard-teacher"></i></div>
-      <div class="num-badge-work">03</div>
-      <h3>Part-time Faculty</h3>
+    <div class="glow-card">
+      <div class="num-badge">03</div>
+      <h3><i class="fas fa-chalkboard-teacher" style="color:var(--gold);margin-right:8px;"></i>Part-time Faculty</h3>
       <div class="company">Filamer Christian University · Computer Studies Dept.</div>
       <p>Delivering quality IT education to the next generation of tech professionals.</p>
       <div class="gold-line"></div>
     </div>
-    <div class="work-card">
-      <div class="ios-icon ios-teal"><i class="fas fa-school"></i></div>
-      <div class="num-badge-work">04</div>
-      <h3>Computer Education Dept.</h3>
+    <div class="glow-card">
+      <div class="num-badge">04</div>
+      <h3><i class="fas fa-school" style="color:var(--gold);margin-right:8px;"></i>Computer Education Dept.</h3>
       <div class="company">Capiz State University</div>
       <p>Affiliated with the department, contributing to curriculum development and student success.</p>
       <div class="gold-line"></div>
@@ -544,9 +472,7 @@
   <!-- QUOTE BOX -->
   <div style="margin-top:60px;">
     <div class="quote-box">
-      <div class="quote-icon-wrap">
-        <div class="ios-icon ios-gold"><i class="fas fa-quote-left"></i></div>
-      </div>
+      <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
       <div>
         <p>"Education is the most powerful tool you can use to <span>change the world</span> — and technology is the bridge that makes it possible."</p>
         <div class="quote-author">
@@ -569,17 +495,17 @@
   </div>
   <div class="contact-grid">
     <div class="contact-card">
-      <div class="ios-icon ios-red"><i class="fas fa-envelope"></i></div>
+      <div class="icon"><i class="fas fa-envelope"></i></div>
       <h4>Email</h4>
       <a href="mailto:lavenagee.boluso2001@gmail.com">lavenagee.boluso2001@gmail.com</a>
     </div>
     <div class="contact-card">
-      <div class="ios-icon ios-blue"><i class="fab fa-linkedin"></i></div>
+      <div class="icon"><i class="fab fa-linkedin"></i></div>
       <h4>LinkedIn</h4>
       <a href="https://www.linkedin.com/in/boluso-lavena-gee-a-bab977318/" target="_blank">View LinkedIn Profile</a>
     </div>
     <div class="contact-card">
-      <div class="ios-icon ios-green"><i class="fas fa-map-marker-alt"></i></div>
+      <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
       <h4>Location</h4>
       <a href="#">Capiz, Philippines</a>
     </div>
