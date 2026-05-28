@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navy & Gold Palette Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1B2A4A;
+      color: #FFFFFF;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #162240;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #C9A84C;
+    }
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      color: #C9A84C;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #C9A84C; }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(160deg, #1B2A4A 60%, #162240 100%);
+    }
+    .hero .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #C9A84C;
+      background-color: #C9A84C33;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 3rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #FFFFFF;
+    }
+    .hero h1 span { color: #C9A84C; }
+    .hero p {
+      color: #CBD5E0;
+      font-size: 1rem;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+    .hero .btn {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 12px 35px;
+      background-color: #C9A84C;
+      color: #1B2A4A;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+    .hero .btn:hover { background-color: #e0c068; }
+
+    /* SECTIONS */
+    .section {
+      padding: 60px 80px;
+    }
+    .section:nth-child(even) {
+      background-color: #162240;
+    }
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #C9A84C;
+      margin-bottom: 10px;
+    }
+    .section .underline {
+      width: 60px;
+      height: 3px;
+      background-color: #C9A84C;
+      margin-bottom: 30px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #243558;
+      border-left: 4px solid #C9A84C;
+      border-radius: 8px;
+      padding: 20px 25px;
+      flex: 1;
+      min-width: 250px;
+    }
+    .card h3 { color: #C9A84C; margin-bottom: 6px; font-size: 1rem; }
+    .card p { color: #CBD5E0; font-size: 0.88rem; line-height: 1.6; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .skill-tag {
+      background-color: #243558;
+      border: 1px solid #C9A84C;
+      color: #C9A84C;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    /* CONTACT */
+    .contact-info p {
+      color: #CBD5E0;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+    .contact-info a { color: #C9A84C; text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #162240;
+      color: #CBD5E0;
+      font-size: 0.8rem;
+      border-top: 1px solid #C9A84C44;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Lavena Boluso</div>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Education</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="avatar">👩</div>
+    <h1>Lavena Gee A. <span>Boluso</span></h1>
+    <p>IT Professional · Educator · Customer Success Manager</p>
+    <a href="#" class="btn">View My Work</a>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <h2>Education Background</h2>
+    <div class="underline"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>BS Information Technology</h3>
+        <p>Your University Name<br/>Year Graduated</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="underline"></div>
+    <div class="skills-grid">
+      <span class="skill-tag">Customer Success</span>
+      <span class="skill-tag">Teaching & Instruction</span>
+      <span class="skill-tag">Information Technology</span>
+      <span class="skill-tag">Digital Business</span>
+      <span class="skill-tag">Microsoft Office</span>
+      <span class="skill-tag">LMS Platforms</span>
+    </div>
+  </div>
+
+  <!-- WORK SAMPLE -->
+  <div class="section">
+    <h2>Work Experience</h2>
+    <div class="underline"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Customer Success Manager</h3>
+        <p>Servio Technology</p>
+      </div>
+      <div class="card">
+        <h3>TESDA Instructor</h3>
+        <p>Digital Business Training Center</p>
+      </div>
+      <div class="card">
+        <h3>Part-time Faculty</h3>
+        <p>Filamer Christian University · Computer Studies Dept.</p>
+      </div>
+      <div class="card">
+        <h3>Computer Education Dept.</h3>
+        <p>Capiz State University</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section">
+    <h2>Contact Details</h2>
+    <div class="underline"></div>
+    <div class="contact-info">
+      <p>📧 <a href="mailto:lavenagee.boluso2001@gmail.com">lavenagee.boluso2001@gmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/boluso-lavena-gee-a-bab977318/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Lavena Gee A. Boluso. All rights reserved.
+  </footer>
+
+</body>
+</html>
